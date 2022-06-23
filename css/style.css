@@ -1,0 +1,166 @@
+body.opened .about-sec {
+  padding-left: 352px;
+}
+.about-sec {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  padding-bottom: 150px;
+  padding-top: 40px;
+
+}
+.about-sec .about_title {
+  width: 100%;
+  float: left;
+}
+.about-sec .about_title h3 {
+  font-size: 60px;
+  font-weight: 800;
+}
+.about-sec .content {
+  width: 100%;
+  height: auto;
+  clear: both;
+  display: flex;
+}
+
+.about-sec .leftpart {
+  width: 50%;
+  padding-right: 20px;
+}
+.about-sec .leftpart .info {
+  width: 100%;
+  float: left;
+  margin-bottom: px;
+}
+.about-sec .leftpart .info h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.about-sec .leftpart .info h3 span {
+  font-weight: 600;
+}
+.about-sec .leftpart .info p {
+  max-width: 90%;
+}
+.about-sec .my_skills {
+  width: 100%;
+  float: left;
+}
+.about-sec .my_skills .title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.about-sec .wrapper {
+  width: 100%;
+  display: flex;
+  padding-top: 40px;
+}
+.about-sec .desc {
+  max-width: 90%;
+}
+.about-sec .wrapper .left {
+  width: 50%;
+  padding-right: 20px;
+}
+.about-sec .wrapper .right {
+  width: 50%;
+  padding-left: 20px;
+}
+.dodo_progress {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+}
+.progress_inner {
+  width: 100%;
+  margin-bottom: 31px;
+}
+.progress_inner:last-child {
+  margin-bottom: 0;
+}
+.progress_inner .label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.progress_inner .background {
+  width: 100%;
+  min-width: 100%;
+  position: relative;
+  height: 16px;
+  border: 1px solid #7e7e7e;
+  padding: 2px;
+}
+.progress_inner .background .bar_in {
+  height: 100%;
+  background: #34495e;
+  width: 0;
+  overflow: hidden;
+}
+.progress_inner .background .bar {
+  width: 0;
+  height: 100%;
+}
+.progress_inner .background .bar.open {
+  width: 100%;
+}
+
+.about-sec .rightpart {
+  width: 50%;
+  padding-left: 200px;
+}
+.about-sec .rightpart .image {
+  position: relative;
+}
+.about-sec .rightpart .image img {
+  position: relative;
+  min-width: 100%;
+  opacity: 0;
+}
+.about-sec .rightpart .image .main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+.about-sec .experience {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  z-index: 1;
+  width: 291px;
+  height: 291px;
+  border-radius: 100%;
+  background-color: #34495e;
+}
+.about-sec .experience .info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+.about-sec .experience .info h3 {
+  font-size: 45px;
+  font-weight: 700;
+  color: #fff;
+}
+.about-sec .experience .info span {
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+}
