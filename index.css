@@ -1,537 +1,1740 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>edina | Home</title>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="index.css">
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+@charset "utf-8";
+html {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
 
-</head>
+body {
+    font-family: poppins;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0;
+    word-wrap: break-word;
+    font-weight: 400;
+    background-color: #fff;
+    color: #7e7e7e;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    line-height: 1.5;
+    font-family: poppins;
+    color: #1a1a1a;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+svg {
+    fill: currentcolor;
+    width: 15px;
+    height: 15px;
+}
+
+img.svg {
+    width: 15px;
+    height: 15px;
+}
+
+.svg.custom {
+    fill: none;
+}
+
+.container {
+    max-width: 1500px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 0 40px;
+    position: relative;
+    clear: both;
+}
+
+.main-header-class {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    position: relative;
+}
+
+.main-header-class,
+.main-header-class * {
+    box-sizing: border-box;
+}
+
+.edina_tm_section {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+}
+
+.main-sidebar {
+    width: 320px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -320px;
+    background-color: #fff;
+    box-shadow: 3px 0 5px #f5f5f5;
+    z-index: 3;
+}
+
+body.opened .main-sidebar {
+    left: 0;
+}
+
+.main-sidebar .logo {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    border-bottom: 1px solid #cbd3d9;
+    padding: 40px;
+    padding-bottom: 31px;
+}
+
+.main-sidebar .logo img {
+    max-width: 120px;
+}
+
+.main-sidebar .menu {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding: 50px 0px;
+    margin-top: -8px;
+    line-height: 30px;
+}
+
+.main-sidebar .menu ul {
+    list-style-type: none;
+}
+
+.main-sidebar .menu ul li {
+    margin: 0 0 8px;
+    width: 100%;
+    float: left;
+}
+
+.main-sidebar .menu ul li:last-child {
+    margin-bottom: 0;
+}
+
+.main-sidebar .menu ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    border-radius: 6px;
+    padding: 9px 15px;
+    position: relative;
+}
+
+.main-sidebar .menu ul li .svg {
+    width: 19px;
+    height: 19px;
+    position: relative;
+    top: 3px;
+    margin-right: 15px;
+}
+
+.main-sidebar .author {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #cbd3d9;
+}
+
+.main-sidebar .author .inner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 30px 55px;
+    margin-top: -12px;
+}
+
+.main-sidebar .author .image {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-top: 12px;
+    display: inline-block;
+}
+
+.main-sidebar .author .main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.main-sidebar .short {
+    padding-left: 13px;
+}
+
+.main-sidebar .short h3 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-top: 5px;
+}
+
+.main-sidebar .short a {
+    text-decoration: none;
+    color: #7e7e7e;
+    font-size: 14px;
+}
+
+.edina_tm_mainpart {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding-left: 0;
+}
+
+body.opened .edina_tm_mainpart {
+    padding-left: 320px;
+}
+
+.edina_tm_hero {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    float: left;
+    background-color: #f9f9fc;
+}
+
+.edina_tm_hero .content {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 0px 20px;
+    padding-right: 13px;
+    padding-bottom: 12px;
+}
+
+.edina_tm_hero .image {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    position: relative;
+    margin-bottom: -30px;
+    opacity: 0;
+    visibility: hidden;
+    left: -20px;
+    top: -4.5px;
+}
+
+body.opened .edina_tm_hero .image {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+}
+
+.edina_tm_hero .image .main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.edina_tm_hero .image:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    background-color: #e2e2e2;
+    border-radius: 100%;
+}
+
+.edina_tm_hero .name {
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.edina_tm_hero .extra {
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    left: -20px;
+    margin-top: -28px;
+}
+
+body.opened .edina_tm_hero .extra {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+}
+
+.edina_tm_hero .text {
+    max-width: 500px;
+    margin: 0 auto 32px;
+    font-size: 16px;
+}
+
+.edina_tm_hero .social ul {
+    margin: 0;
+    list-style-type: none;
+    padding-right: 41px;
+}
+
+.edina_tm_hero .social ul li {
+    margin: 0;
+    display: inline-block;
+}
+
+.edina_tm_hero .social ul li a {
+    text-decoration: none;
+    color: #e7e7e7;
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+    padding: 0 20px;
+}
+
+.edina_tm_hero .social ul li a:after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: #e5e5e5;
+    top: 0;
+    right: 0;
+}
+
+.edina_tm_hero .social ul li:last-child a:after {
+    display: none;
+}
+
+.edina_tm_hero .social ul li .svg {
+    width: 19px;
+    height: 19px;
+}
+
+body.opened .about-sec {
+    padding-left: 320px;
+}
+
+.about-sec {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding-bottom: 150px;
+    padding-top: 40px;
+}
+
+.about-sec .about_title {
+    width: 100%;
+    float: left;
+}
+
+.about-sec .about_title h3 {
+    font-size: 60px;
+    font-weight: 800;
+    margin-left: -8px;
+}
+
+.about-sec .content {
+    width: 100%;
+    height: auto;
+    clear: both;
+    display: flex;
+}
+
+.about-sec .leftpart {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.about-sec .leftpart .info {
+    width: 100%;
+    float: left;
+    margin-bottom: px;
+    margin-top: -22px;
+    margin-left: -8px;
+}
+
+.about-sec .leftpart .info h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.about-sec .leftpart .info h3 span {
+    font-weight: 600;
+}
+
+.about-sec .leftpart .info p {
+    max-width: 90%;
+}
+
+.about-sec .my_skills {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+    margin-left: -8px;
+}
+
+.about-sec .my_skills .title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about-sec .wrapper {
+    width: 100%;
+    display: flex;
+    padding-top: 40px;
+    padding-top: 22px;
+}
+
+.about-sec .desc {
+    max-width: 90%;
+}
+
+.about-sec .wrapper .left {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.about-sec .wrapper .right {
+    width: 50%;
+    padding-left: 35.4px;
+}
+
+.dodo_progress {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+}
+
+.progress_inner {
+    width: 100%;
+    margin-bottom: 31px;
+}
+
+.progress_inner:last-child {
+    margin-bottom: 0;
+}
+
+.progress_inner .label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.progress_inner .background {
+    width: 100%;
+    min-width: 100%;
+    position: relative;
+    height: 16px;
+    border: 1px solid #7e7e7e;
+    padding: 2px;
+}
+
+.progress_inner .background .bar_in {
+    height: 100%;
+    background: #34495e;
+    width: 0;
+    overflow: hidden;
+}
+
+.progress_inner .background .bar {
+    width: 0;
+    height: 100%;
+}
+
+.progress_inner .background .bar.open {
+    width: 100%;
+}
+
+.about-sec .rightpart {
+    width: 50%;
+    padding-left: 200px;
+}
+
+.about-sec .rightpart .image {
+    position: relative;
+}
+
+.about-sec .rightpart .image img {
+    position: relative;
+    min-width: 100%;
+    opacity: 0;
+}
+
+.about-sec .rightpart .image .main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.about-sec .experience {
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    z-index: 1;
+    width: 291px;
+    height: 291px;
+    border-radius: 100%;
+    background-color: #34495e;
+}
+
+.about-sec .experience .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.about-sec .experience .info h3 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.about-sec .experience .info span {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+}
+
+body.opened .services {
+    padding-left: 320px;
+}
+
+.edina_tm_title {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+}
+
+.edina_tm_title h3 {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.edina_tm_title p {
+    max-width: 600px;
+}
+
+.edina_tm_services {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    background-color: #F9F9FC;
+    padding: 40px 0px 50px 0px;
+}
+
+.service_list ul{
+  margin: 0 0 0 0;
+}
+
+.edina_tm_services .container {
+    padding: 0;
+}
+
+.leftpadding1 {
+    margin-left: 32px;
+    margin-left: -16px;
+}
+
+
+.edina_tm_services .service_list {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding-top: 142px;
+}
+
+.edina_tm_services ul {
+    margin: 0px 0px 0px 0px !important;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 15px;
+}
+
+.edina_tm_services ul li {
+    margin: 0px 0px 30px 0px;
+    width: 25%;
+    padding-left: 40px;
+    float: left;
+}
+
+.edina_tm_services ul li .list_inner {
+    width: 100%;
+    height: 100%;
+    clear: both;
+    float: left;
+    position: relative;
+    background-color: #fff;
+    padding: 50px 100px 45px 50px;
+    border-radius: 6px;
+}
+
+.edina_tm_services ul li .list_inner:hover {
+    background-color: #000;
+}
+
+.edina_tm_services ul li .svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.edina_tm_services ul li .list_inner:hover .svg {
+    color: #fff;
+}
+
+.edina_tm_services ul li .list_inner:hover .svg.custom {
+    stroke: #fff;
+}
+
+.edina_tm_services ul li h3 {
+    font-weight: 600;
+    font-size: 26px;
+    color: #1A1A1A;
+    margin-bottom: 20px;
+}
+
+.edina_tm_services ul li .list_inner:hover h3 {
+    color: #fff;
+}
+
+.edina_tm_services ul li .learn_more {
+    text-decoration: none;
+    color: #7E7E7E;
+    font-size: 18px;
+    display: inline-block;
+    position: relative;
+}
+
+.edina_tm_services ul li .learn_more span {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 2px;
+    background-color: #7E7E7E;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 14px;
+    border-radius: 50px;
+}
+
+.edina_tm_services ul li .learn_more span:before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 2px;
+    background-color: #7E7E7E;
+    transform: rotate(45deg);
+    right: 0px;
+    top: -2px;
+    border-radius: 50px;
+}
+
+.edina_tm_services ul li .learn_more span:after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 2px;
+    background-color: #7E7E7E;
+    transform: rotate(-45deg);
+    right: 0px;
+    bottom: -2px;
+    border-radius: 50px;
+}
+
+.edina_tm_services ul li .list_inner:hover .learn_more span {
+    width: 30px;
+    background-color: #fff;
+}
+
+.edina_tm_services ul li .list_inner:hover .learn_more span:before,
+.edina_tm_services ul li .list_inner:hover .learn_more span:after {
+    background-color: #fff;
+}
+
+.edina_tm_services ul li .list_inner:hover .learn_more {
+    color: #fff;
+}
+
+.edina_tm_full_link {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 5;
+}
+
+.edina_tm_modalbox {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100vh;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, .8);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.edina_tm_modalbox.opened {
+    opacity: 1;
+    visibility: visible;
+}
+
+.edina_tm_modalbox .container {
+    height: 100vh;
+}
+
+.edina_tm_modalbox .box_inner {
+    position: absolute;
+    top: 70px;
+    bottom: 70px;
+    width: 968px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -20px;
+    transition-delay: .3s;
+}
+
+.edina_tm_modalbox.opened .box_inner {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0px;
+}
+
+.edina_tm_modalbox .close {
+    position: fixed;
+    left: 100%;
+    top: 0px;
+    margin-left: 40px;
+    z-index: 111111;
+}
+
+.edina_tm_modalbox .close a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.edina_tm_modalbox .close .svg {
+    width: 50px;
+    height: 50px;
+}
+
+.edina_tm_modalbox .description_wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    padding: 50px;
+    overflow-y: scroll;
+}
+
+.edina_tm_services .popup_informations {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: -11;
+    display: none;
+}
+
+.service_title {
+    margin-top: -26px;
+}
+
+.edina_tm_modalbox .service_title {
+    display: none;
+}
+
+.edina_tm_modalbox .description_wrap .svg {
+    display: none;
+}
+
+.edina_tm_modalbox .description_wrap .learn_more {
+    display: none;
+}
+
+.edina_tm_modalbox .description_wrap .edina_tm_full_link {
+    display: none;
+}
+
+.edina_tm_modalbox .popup_informations {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+}
+
+.edina_tm_modalbox .popup_informations .image {
+    position: relative;
+    max-height: 450px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.edina_tm_modalbox .popup_informations .image img {
+    position: relative;
+    min-width: 100%;
+    opacity: 0;
+}
+
+.edina_tm_modalbox .popup_informations .image .main {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.edina_tm_modalbox .popup_informations h3 {
+    color: #0F172A;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.edina_tm_modalbox .popup_informations p {
+    margin-bottom: 30px;
+}
+
+.edina_tm_modalbox .in_list {
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.edina_tm_modalbox .in_list ul {
+    margin: 0px;
+    list-style-type: none;
+}
+
+.edina_tm_modalbox .in_list ul li {
+    margin: 0px 0px 15px 0px;
+    width: 100%;
+    float: left;
+    position: relative;
+    padding-left: 20px;
+}
+
+.edina_tm_modalbox .in_list ul li:before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #7e7e7e;
+    left: 0px;
+    top: 13px;
+}
+
+.edina_tm_modalbox .in_list ul li:last-child {
+    margin-bottom: 0px;
+}
+
+.edina_tm_modalbox .in_list ul li p {
+    margin-bottom: 0px;
+}
+
+body.opened .edina_tm_portfolio {
+    padding-left: 320px;
+}
 
 
 
-<body>
+.edina_tm_portfolio {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding: 0px 0px 70px 0px;
+    margin: -8px;
 
 
+}
 
 
-<div class="main-header-class" data-magic-cursor=""> 
-<section class="header">
-	<div class="main-sidebar">
-<div class="sidebar-main">
-<div class="logo">
-<a href="#"><img src="img/logo/dark.png" alt="" /></a>
-</div>
-<div class="menu">
-<ul>
-<li>
-<div class="list_inner current">
-<a href="#home"><img class="svg custom" src="img/svg/home.svg"/>Home</a>
-</div>
-</li>
-<li>
-<div class="list_inner">
-<a href="#about"><img class="svg custom" src="img/svg/human.svg"/>About</a>
-</div>
-</li>
-<li>
-<div class="list_inner">
-<a href="#service"><img class="svg custom" src="img/svg/service.svg"/>Service</a>
-</div>
-</li>
-<li>
-<div class="list_inner">
-<a href="#portfolio"><img class="svg custom" src="img/svg/portfolio.svg"/>Portfolio</a>
-</div>
-</li>
-<li>
-<div class="list_inner">
-<a href="#testimonial"><img class="svg custom" src="img/svg/testimonial.svg"/>Testimonial</a>
-</div>
-</li>
-<li>
-<div class="list_inner">
-<a href="#blog"><img class="svg custom" src="img/svg/blog.svg"/>Blog</a>
-</div>
-</li>
-<li>
-<div class="list_inner">
-<a href="#contact"><img class="svg custom" src="img/svg/contact.svg"/>Contact</a>
-</div>
-</li>
-</ul>
-</div>
-<div class="author">
-<div class="inner">
-<div class="image">
-<div class="main" data-img-url="img/about/avatar.jpg"></div>
-</div>
-<div class="short">
-<h3>Nelson</h3>
-<a href="#">example@gmail.com</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</section>
-<section>
-	<div class="edina_tm_mainpart">
-
-<div class="edina_tm_hero" id="home">
-<div class="content">
-<div class="image">
-<div class="main" data-img-url="img/hero/2.jpg"></div>
-</div>
-<div class="extra">
-<h3 class="name">Davide Santon</h3>
-<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volut purus ut erat mus.pendisse aliquam.</p>
-<div class="social">
-<ul>
-<li><a href="#"><img class="svg custom" src="img/svg/social/fb.svg" alt="" /></a></li>
-<li><a href="#"><img class="svg custom" src="img/svg/social/tw.svg" alt="" /></a></li>
-<li><a href="#"><img class="svg custom" src="img/svg/social/in.svg" alt="" /></a></li>
-<li><a href="#"><img class="svg custom" src="img/svg/social/db.svg" alt="" /></a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section id="about" class="about-sec">
-
-<div class="about-me" >
-<div class="container">
-<div class="about_title">
-<h3>About Me</h3>
-</div>
-<div class="content">
-<div class="leftpart wow fadeInLeft">
-<div class="info">
-<h3>Hi, I'm <span>Rogers Nelson</span></h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus. Eu leo morbi massa sem faucibus nulla gravida arcu ante sollicitudin orci nunc gravida.</p>
-</div>
-<div class="my_skills">
-<h3 class="title">What is my skill level?</h3>
-<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
-<div class="wrapper">
-<div class="left">
-<div class="dodo_progress">
-<div class="progress_inner">
-<span class="label">React.Js</span>
-<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
-</div>
-<div class="progress_inner">
-<span class="label">Photoshop</span>
-<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
-</div>
-<div class="progress_inner">
-<span class="label">Illustrator</span>
-<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
-</div>
-</div>
-</div>
-<div class="right">
-<div class="dodo_progress">
-<div class="progress_inner">
-<span class="label">Vue.Js</span>
-<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
-</div>
-<div class="progress_inner">
-<span class="label">Figma</span>
-<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
-</div>
-<div class="progress_inner">
-<span class="label">WordPress</span>
-<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="rightpart wow fadeInLeft"">
-<div class="image">
-<img src="img/thumbs/26-35.jpg" alt="" />
-<div class="main" data-img-url="img/about/2.jpg"></div>
-<div class="experience" data-wow-duration="1.2s">
-<div class="info">
-<h3>6+ Years</h3>
-<span>Of Experiance</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</section>
+.edina-testi{
+  margin-top: -59px;
+}
 
 
-<section class="services">
-<div class="edina_tm_services" id="service">
-<div class="container">
-<div class="edina_tm_title leftpadding1">
-<h3>What I Do</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
-</div>
-<div class="service_list">
-<ul>
-<li class="wow fadeInLeft">
-<div class="list_inner">
-<img class="svg custom" src="img/svg/1.svg" alt="" />
-<div class="service_title"><h3>Motion Graphic</h3></div>
-<a class="learn_more" href="#">Learn More<span></span></a>
-<a class="edina_tm_full_link" href="#"></a>
-<div class="popup_informations">
-<div class="image">
-<img src="img/thumbs/4-3.jpg" alt="" />
-<div class="main" data-img-url="img/service/1.jpg"></div>
-</div>
-</div>
-</div>
-</li>
-<li class="wow fadeInLeft">
-<div class="list_inner">
-<img class="svg custom" src="img/svg/4.svg" alt="" />
-<div class="service_title"><h3>Ui/Ux Consultancy</h3></div>
-<a class="learn_more" href="#">Learn More<span></span></a>
-<a class="edina_tm_full_link" href="#"></a>
-<div class="popup_informations">
-<div class="image">
-<img src="img/thumbs/4-3.jpg" alt="" />
-<div class="main" data-img-url="img/service/2.jpg"></div>
-</div>
+.edina_tm_portfolio .portfolio_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding-top: 80px;
+}
 
-</div>
-</div>
-</li>
-<li class="wow fadeInLeft" data-wow-delay="0.4s">
-<div class="list_inner">
-<img class="svg custom" src="img/svg/2.svg" alt="" />
-<div class="service_title"><h3>Branding &amp; Design</h3></div>
-<a class="learn_more" href="#">Learn More<span></span></a>
-<a class="edina_tm_full_link" href="#"></a>
-<div class="popup_informations">
-<div class="image">
-<img src="img/thumbs/4-3.jpg" alt="" />
-<div class="main" data-img-url="img/service/3.jpg"></div>
-</div>
-</div>
-</div>
-</li>
-<li class="wow fadeInLeft" data-wow-delay="0.4s">
-<div class="list_inner">
-<img class="svg custom" src="img/svg/3.svg" alt="" />
-<div class="service_title"><h3>Mobile App Design</h3></div>
-<a class="learn_more" href="#">Learn More<span></span></a>
-<a class="edina_tm_full_link" href="#"></a>
-<div class="popup_informations">
-<div class="image">
-<img src="img/thumbs/4-3.jpg" alt="" />
-<div class="main" data-img-url="img/service/4.jpg"></div>
-</div>
+.edina_tm_portfolio {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding: 100px 0px 70px 0px;
+}
 
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-	
-</section>
+.edina_tm_portfolio .portfolio_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding-top: 80px;
+}
 
 
+body.opened .edina_tm_testimonials {
+    padding-left: 320px;
+}
 
 
+.edina_tm_testimonials {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    background-color: #F9F9FC;
+    padding: 100px 0px 90px 0px;
+}
 
-<div class="edina_tm_portfolio" id="portfolio">
-<div class="container">
-<div class="edina_tm_title edina-testi">
-<h3>Portfolio</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
-</div>
-<div class="portfolio_inner wow fadeInLeft">
-<div class="my_carousel gallery_zoom">
-<ul class="owl-carousel">
-<li>
-<div class="list_inner">
-<div class="image">
-<img src="img/thumbs/1-1.jpg" alt="" />
-<div class="main" data-img-url="img/portfolio/1.jpg"></div>
-</div>
-<div class="details">
-<h3><a href="#">Chul Urina</a></h3>
-<span><a href="#">Vimeo</a></span>
-</div>
-<a class="edina_tm_full_link popup-vimeo" href=""></a>
-</div>
-</li>
-<li>
-<div class="list_inner">
-<div class="image">
-<img src="img/thumbs/1-1.jpg" alt="" />
-<div class="main" data-img-url="img/portfolio/2.jpg"></div>
-</div>
-<div class="details">
-<h3><a href="#">Sutki Vorta</a></h3>
-<span><a href="#">Youtube</a></span>
-</div>
-<a class="edina_tm_full_link popup-youtube" href=""></a>
-</div>
-</li>
-<li>
-<div class="list_inner">
-<div class="image">
-<img src="img/thumbs/1-1.jpg" alt="" />
-<div class="main" data-img-url="img/portfolio/3.jpg"></div>
-</div>
-<div class="details">
-<h3><a href="#">Murir Moya</a></h3>
-<span><a href="#">Soundcloud</a></span>
-</div>
-<a class="edina_tm_full_link soundcloude_link mfp-iframe audio" href=""></a>
-</div>
-</li>
-</ul>
-<a class="prev_button" href="#"><span></span></a>
-<a class="next_button" href="#"><span></span></a>
-</div>
-</div>
-</div>
-</div>
+.edina_tm_testimonials .list {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding-top: 60px;
+}
 
+.edina_tm_testimonials .list ul {
+    margin: 0px;
+    list-style-type: none;
+}
 
-<div class="edina_tm_testimonials" id="testimonial">
-<div class="container">
-<div class="edina_tm_title edina-testi">
-<h3>Testimonials</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
-</div>
-<div class="list wow fadeInLeft">
-<ul class="owl-carousel owl-theme">
-<li>
-<div class="list_inner">
-<div class="details">
-<div class="author">
-<div class="image">
-<div class="main" data-img-url="img/testimonials/1.jpg"></div>
-</div>
-<div class="short">
-<h3>Brook Kennedy</h3>
-<span>Marketing Manager</span>
-</div>
-</div>
-<div class="icon">
-<img class="svg" src="img/svg/quote.svg" alt="" />
-</div>
-</div>
-<div class="text">
-<p>Hi,I’m Hasan Bond and I am designer &amp; developer who dream making the world better place by products. I am also very active for international clients.</p>
-</div>
-</div>
-</li>
-<li>
-<div class="list_inner">
-<div class="details">
-<div class="author">
-<div class="image">
-<div class="main" data-img-url="img/testimonials/2.jpg"></div>
-</div>
-<div class="short">
-<h3>Avon Smith</h3>
-<span>Designer</span>
-</div>
-</div>
-<div class="icon">
-<img class="svg" src="img/svg/quote.svg" alt="" />
-</div>
-</div>
-<div class="text">
-<p>Hi,I’m Hasan Bond and I am designer &amp; developer who dream making the world better place by products. I am also very active for international clients.</p>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
+.edina_tm_testimonials .list ul li {
+    margin: 0px;
+}
+
+.edina_tm_testimonials .list ul li .list_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    position: relative;
+    background-color: #fff;
+    padding: 50px 50px 60px 50px;
+    border-radius: 6px;
+}
+
+.edina_tm_testimonials .list .details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.edina_tm_testimonials .list .author {
+    display: flex;
+    align-items: center;
+}
+
+.edina_tm_testimonials .list .image {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.edina_tm_testimonials .list .image .main {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 6px;
+}
+
+.edina_tm_testimonials .list .short {
+    padding-left: 30px;
+}
+
+.edina_tm_testimonials .list .short h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.edina_tm_testimonials .list .short span {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.edina_tm_testimonials .list .text p {
+    font-size: 20px;
+}
+
+.edina_tm_testimonials .owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 33px;
+}
+
+.edina_tm_testimonials .owl-theme .owl-dots .owl-dot span {
+    margin: 0px 10px 0px 0px;
+    width: 14px;
+    height: 14px;
+    background-color: #7E7E7E;
+    border: 1px solid transparent;
+
+}
+
+.edina_tm_testimonials .owl-theme .owl-dots .owl-dot.active span {
+    background-color: transparent;
+    border-color: #34495E;
+    width: 16px;
+    height: 16px;
+}
+
+.edina_tm_testimonials .svg {
+    width: 80px;
+    height: 80px;
+}
 
 
-<div class="edina_tm_news" id="blog">
-<div class="container">
-<div class="edina_tm_title edina-testi">
-<h3>News</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
-</div>
-<div class="news_inner wow fadeInLeft">
-<div class="my_carousel">
-<ul class="owl-carousel">
-<li>
-<div class="list_inner">
-<div class="image">
-<img src="img/thumbs/1-1.jpg" alt="" />
-<div class="main" data-img-url="img/news/1.jpg"></div>
-<a class="edina_tm_full_link" href="#"></a>
-</div>
-<div class="news_details">
-<h3 class="title"><a href="#">Dostie Memorie</a></h3>
-</div>
-</div>
-</li>
-<li>
-<div class="list_inner">
-<div class="image">
-<img src="img/thumbs/1-1.jpg" alt="" />
-<div class="main" data-img-url="img/news/2.jpg"></div>
-<a class="edina_tm_full_link" href="#"></a>
-</div>
-<div class="news_details">
-<span>June 25,2021 <a href="#">Branding</a></span>
-<h3 class="title"><a href="#">Mario Pocopoc</a></h3>
-</div>
-
-</div>
-</li>
-<li>
-<div class="list_inner">
-<div class="image">
-<img src="img/thumbs/1-1.jpg" alt="" />
-<div class="main" data-img-url="img/news/3.jpg"></div>
-<a class="edina_tm_full_link" href="#"></a>
-</div>
-<div class="news_details">
-<span>May 01,2021 <a href="#">Lifestyle</a></span>
-<h3 class="title"><a href="#">Jacuba Bamba</a></h3>
-</div>
-</div>
-</li>
-<li>
-<div class="list_inner">
-<div class="image">
-<img src="img/thumbs/1-1.jpg" alt="" />
-<div class="main" data-img-url="img/news/4.jpg"></div>
-<a class="edina_tm_full_link" href="#"></a>
-</div>
-<div class="news_details">
-<span>April 07,2021 <a href="#">Design</a></span>
-<h3 class="title"><a href="#">Forzo Immobile</a></h3>
-</div>
-</div>
-</li>
-<li>
-<div class="list_inner">
-<div class="image">
-<img src="img/thumbs/1-1.jpg" alt="" />
-<div class="main" data-img-url="img/news/2.jpg"></div>
-<a class="edina_tm_full_link" href="#"></a>
-</div>
-<div class="news_details">
-<span>March 25,2021 <a href="#">Branding</a></span>
-<h3 class="title"><a href="#">Mosby Lavette</a></h3>
-</div>
-</div>
-</li>
-</ul>
-<a class="prev_button" href="#"><span></span></a>
-<a class="next_button" href="#"><span></span></a>
-</div>
-</div>
-</div>
-</div>
+body.opened .edina_tm_news {
+    padding-left: 320px;
+}
 
 
+.edina_tm_news {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding: 100px 0px;
+}
 
-<div class="edina_tm_contact leftpadding1" id="contact">
-<div class="container">
-<div class="edina_tm_title edina-testi">
-<h3>Contact</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
-</div>
-<div class="extra_info">
-<ul class="wrapper">
-<li class="wow fadeInLeft" data-wow-duration="1s">
-<div class="list_inner">
-<h3>Phone:</h3>
-<ul class="in">
-<li>+452 666 386</li>
-<li>+465 562 226</li>
-</ul>
-</div>
-</li>
-<li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-<div class="list_inner">
-<h3>Email:</h3>
-<ul class="in">
-<li><a href="#"><span>
-support@gmail.com</span></a></li>
-<li><a href="#"><span>example@support.com</span></a></li>
-</ul>
-</div>
-</li>
-<li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
-<div class="list_inner">
-<h3>Address:</h3>
-<ul class="in">
-<li>
-<p>Maount View, Oval Road<br /> New York, USA</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="mainpart">
-<div class="left">
-<div class="title">
-<p>I'm always open to discussing product<br /><span>design work or partnerships.</span></p>
-</div>
-<div class="fields wow fadeInLeft" data-wow-duration="1s">
-<form action="" method="post" class="contact_form" id="contact_form" autocomplete="off">
-<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
-<div class="empty_notice"><span>Please Fill Required Fields</span></div>
-<div class="first_row">
-<input id="name" type="text" placeholder="Name*" />
-</div>
-<div class="second">
-<input id="email" type="text" placeholder="Email*" />
-</div>
-<div class="third">
-<textarea id="message" placeholder="Message*"></textarea>
-</div>
-<div class="edina_tm_button">
-<a id="send_message" href="#">Submit</a>
-</div>
+.edina_tm_news .news_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding-top: 60px;
+}
 
-</form>
-</div>
-</div>
-<div class="right wow fadeInLeft">
-<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14538.088588772658!2d88.6047775!3d24.3631329!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x77d2fff44f051ccc!2sDainik%20Barta%20Complex%2C%20Alupotti%2C%20Rajshahi!5e0!3m2!1sen!2sbd!4v1656168287968!5m2!1sen!2sbd" width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-</div>
-</div>
-</div>
-</div>
+.edina_tm_news ul li .news_details {
+    width: 100%;
+    float: left;
+    padding-top: 9px;
+}
 
-</div>
+.edina_tm_news ul li .news_details span {
+    font-size: 16px;
+    display: inline-block;
+}
+
+.edina_tm_news ul li .news_details span a {
+    text-decoration: none;
+    color: #7E7E7E;
+    position: relative;
+    display: inline-block;
+}
+
+.edina_tm_news ul li .news_details span a:before {
+    position: relative;
+    content: ".";
+    font-size: 40px;
+    top: -3px;
+    color: #7e7e7e;
+    padding: 0px 5px;
+}
+
+.edina_tm_news ul li .news_details .title {
+    line-height: 1.2;
+}
+
+.edina_tm_news ul li .news_details .title a {
+    text-decoration: none;
+    color: #34495E;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.edina_tm_modalbox {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100vh;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, .8);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.edina_tm_modalbox.opened {
+    opacity: 1;
+    visibility: visible;
+}
+
+.edina_tm_modalbox .container {
+    height: 100vh;
+}
+
+.edina_tm_modalbox .box_inner {
+    position: absolute;
+    top: 70px;
+    bottom: 70px;
+    width: 968px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -20px;
+    transition-delay: .3s;
+
+}
+
+.edina_tm_modalbox.opened .box_inner {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0px;
+}
+
+.edina_tm_modalbox .close {
+    position: fixed;
+    left: 100%;
+    top: 0px;
+    margin-left: 40px;
+    z-index: 111111;
+}
+
+.edina_tm_modalbox .close a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.edina_tm_modalbox .close .svg {
+    width: 50px;
+    height: 50px;
+}
+
+.edina_tm_modalbox .description_wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    padding: 50px;
+    overflow-y: scroll;
+}
+
+.edina_tm_modalbox .details {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.edina_tm_modalbox .description_wrap .image {
+    position: relative;
+    max-height: 450px;
+    z-index: -1;
+    margin-bottom: 45px;
+}
+
+.edina_tm_modalbox .description_wrap .image img {
+    min-width: 100%;
+    opacity: 0;
+}
+
+.edina_tm_modalbox .description_wrap .image .main {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.edina_tm_modalbox .news_details {
+    margin-bottom: 20px;
+}
+
+.edina_tm_modalbox .news_details .title {
+    font-weight: 600;
+    font-size: 23px;
+    margin-bottom: 9px;
+}
+
+.edina_tm_modalbox .news_details .title a {
+    text-decoration: none;
+    color: #1A1A1A;
+}
+
+.edina_tm_modalbox .news_details span {
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.edina_tm_modalbox .news_details span a {
+    text-decoration: none;
+    color: #7E7E7E;
+    position: relative;
+    display: inline-block;
+}
+
+.edina_tm_modalbox .news_details span a:before {
+    position: relative;
+    content: ".";
+    font-size: 40px;
+    top: -3px;
+    color: #7e7e7e;
+    padding: 0px 5px;
+}
+
+.edina_tm_news .main_content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: -11;
+    display: none;
+}
+
+body.modal {
+    overflow-y: hidden;
+}
+
+.edina_tm_modalbox .main_content {
+    width: 100%;
+    float: left;
+}
+
+.edina_tm_modalbox .main_content .descriptions {
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.edina_tm_modalbox .main_content .descriptions .bigger {
+    color: #888;
+    font-size: 20px;
+    margin-bottom: 31px;
+}
+
+.edina_tm_modalbox .main_content .descriptions p {
+    margin-bottom: 22px;
+}
+
+.edina_tm_modalbox .main_content .quotebox {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.edina_tm_modalbox .main_content .quotebox p {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 23px;
+    border-left: 2px solid #1A1A1A;
+    padding-left: 30px;
+    color: #1A1A1A;
+}
+
+body.opened .edina_tm_contact {
+    padding-left: 320px;
+}
+
+.edina_tm_contact {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    background-color: #F9F9FC;
+    padding: 100px 0px;
+}
+
+.edina_tm_contact .extra_info {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding-top: 60px;
+    margin-bottom: 30px;
+}
+
+.edina_tm_contact .extra_info .wrapper {
+    margin: 0px 0px 0px -30px;
+    list-style-type: none;
+}
+
+.edina_tm_contact .extra_info .wrapper>li {
+    margin: 0px 0px 30px 0px;
+    float: left;
+    width: 33.3333%;
+    padding-left: 30px;
+}
+
+.edina_tm_contact .extra_info .wrapper>li .list_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    position: relative;
+    background-color: #fff;
+    padding: 33px 35px 41px 35px;
+}
+
+.edina_tm_contact .extra_info .in {
+    margin: 0px;
+    list-style-type: none;
+}
+
+.edina_tm_contact .extra_info .in li {
+    margin: 0px 0px 8px 0px;
+    width: 100%;
+    float: left;
+}
+
+.edina_tm_contact .extra_info .in li :last-child {
+    margin-bottom: 0px;
+}
+
+.edina_tm_contact .extra_info h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.edina_tm_contact .extra_info a {
+    text-decoration: none;
+    color: #7E7E7E;
+}
+
+.edina_tm_contact .mainpart {
+    width: 100%;
+    height: auto;
+    clear: both;
+    display: flex;
+}
+
+.edina_tm_contact .mainpart .left {
+    width: 50%;
+    background-color: #fff;
+    padding: 55px 45px 60px 45px;
+    margin-right: 30px;
+}
+
+.edina_tm_contact .mainpart .left .title {
+    width: 100%;
+    float: left;
+    margin-bottom: 14px;
+}
+
+.edina_tm_contact .mainpart .left .title p {
+    font-size: 25px;
+    line-height: 2;
+}
+
+.edina_tm_contact .mainpart .left .title span {
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
+.edina_tm_contact .fields {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+}
+
+.edina_tm_contact .first_row {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.edina_tm_contact .second {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.edina_tm_contact .third {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.edina_tm_contact input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #CBD3D9;
+    background-color: transparent;
+    font-size: 16px;
+    color: #7E7E7E;
+    font-weight: 500;
+    font-family: "Poppins";
+    padding-left: 0px !important;
+}
+
+.edina_tm_contact input:focus {
+    outline: none;
+    border-bottom-color: #0F172A;
+    background-color: transparent;
+}
+
+.edina_tm_contact textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #CBD3D9;
+    background-color: transparent;
+    font-size: 16px;
+    color: #7E7E7E;
+    font-weight: 500;
+    font-family: "Poppins";
+    height: 50px;
+    resize: none;
+    padding-left: 0px !important;
+}
+
+.edina_tm_contact textarea:focus {
+    outline: none;
+    border-bottom-color: #0F172A;
+    background-color: transparent;
+}
+
+.edina_tm_contact .empty_notice {
+    color: #F52225;
+    margin-bottom: 7px;
+    display: none;
+    text-align: left;
+    font-weight: 500;
+}
+
+.edina_tm_contact .contact_error {
+    color: #F52225;
+    text-align: left;
+    font-weight: 500;
+}
+
+.edina_tm_contact .returnmessage {
+    color: #3A00FF;
+    margin-bottom: 7px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.edina_tm_contact .edina_tm_button a {
+    border-radius: 6px;
+    padding: 6px 33px;
+}
+
+.edina_tm_button {
+    width: 100%;
+    float: left;
+    clear: both;
+}
+
+.edina_tm_button a {
+    text-decoration: none;
+    color: #1A1A1A;
+    font-weight: 500;
+    font-size: 18px;
+    display: inline-block;
+    border-radius: 6px;
+    border: 2px solid #7E7E7E;
+    padding: 8px 35px 7px 35px;
+}
+
+.edina_tm_button a:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    border-color: #1A1A1A;
+}
+
+.edina_tm_contact .right {
+    width: 50%;
+    margin-left: 30px;
+}
+
+.edina_tm_contact .right .map {
+    min-height: 594px;
+    width: 100%;
+    filter: grayscale(1);
+    padding-top: 30px;
+}
 
 
+textarea {
+    border-radius: 0;
+    resize: vertical;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #eee;
+    transition: all .3s ease
+}
 
+input[type=text],
+input[type=password],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=week],
+input[type=number],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=color],
+.uneditable-input {
+    border-radius: 0;
+    min-width: auto;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    transition: all .3s ease
+}
 
+textarea:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=date]:focus,
+input[type=month]:focus,
+input[type=time]:focus,
+input[type=week]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=color]:focus,
+.uneditable-input:focus {
+    border-color: #ccc;
+    background: #eee
+}
 
-</div>
+input[type=submit] {
+    padding: 13px 15px;
+    height: 40px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: .5px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background: #777;
+    font-family: mulish;
+    transition: all .3s ease
+}
 
+input[type=submit]:hover {
+    background: #444
+}
 
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.js"></script>
-<script src="js/plugins.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&amp;callback=initMap"></script>
-<script src="js/init.js"></script>
+select {
+    padding: 8px;
+    border: 2px solid #eee
+}
 
-</body>
-</html>
+input[type=button] {
+    cursor: pointer;
+    transition: all .3s ease
+}
+
+.owl-carousel,
+.owl-carousel .owl-item {
+    position: relative
+}
+
+.owl-carousel {
+    display: none;
+    width: 100%;
+    z-index: 1
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+}
+
+.owl-carousel .owl-item,
+.owl-carousel .owl-wrapper {}
+
+.owl-carousel .owl-item {
+    min-height: 1px;
+    float: left;
+}
+
+.owl-carousel .owl-item img {
+    width: auto
+}
+
+.owl-carousel .owl-dots.disabled,
+.owl-carousel .owl-nav.disabled {
+    display: none
+}
+
+.no-js .owl-carousel,
+.owl-carousel.owl-loaded {
+    display: block
+}
+
+.owl-carousel .owl-dot,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-nav .owl-prev {
+    cursor: pointer;
+}
+
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block
+}
+
+.owl-carousel.owl-hidden {
+    opacity: 0
+}
+
+.owl-carousel.owl-refresh .owl-item {
+    visibility: hidden
+}
+
+.owl-carousel.owl-drag .owl-item {
+    user-select: none
+}
+
+.owl-carousel.owl-grab {}
+
+.owl-carousel.owl-rtl {}
+
+.owl-carousel.owl-rtl .owl-item {}
+
+.owl-carousel .animated {}
+
+.owl-carousel .owl-animated-in {}
+
+.owl-carousel .owl-animated-out {}
+
+.owl-carousel .fadeOut {}
+
+.owl-height {}
+
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+}
+
+.owl-carousel .owl-item img.owl-lazy {}
+
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000
+}
+
