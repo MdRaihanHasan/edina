@@ -1,366 +1,537 @@
-@charset "utf-8";
-html {
-  overflow-x: hidden;
-  padding: 0;
-  margin: 0;
-}
-body {
-  font-family: poppins;
-  font-size: 18px;
-  line-height: 30px;
-  letter-spacing: 0;
-  word-wrap: break-word;
-  font-weight: 400;
-  background-color: #fff;
-  color: #7e7e7e;
-}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>edina | Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  line-height: 1.5;
-  font-family: poppins;
-  color: #1a1a1a;
-}
-h1 {
-  font-size: 45px;
-}
-h2 {
-  font-size: 36px;
-}
-h3 {
-  font-size: 30px;
-}
-h4 {
-  font-size: 24px;
-}
-h5 {
-  font-size: 20px;
-}
-h6 {
-  font-size: 16px;
-}
-
-svg {
-  fill: currentcolor;
-  width: 15px;
-  height: 15px;
-}
-img.svg {
-  width: 15px;
-  height: 15px;
-}
-.svg.custom {
-  fill: none;
-}
-
-/*
-.container {
-  max-width: 1500px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  padding: 0 40px;
-  position: relative;
-  clear: both;
-}*/
-
-
-.main-header-class {
-  width: 100%;
-  height: auto;
-  clear: both;
-  float: left;
-  position: relative;
-}
-.main-header-class, .main-header-class * {
-  box-sizing: border-box;
-}
-.edina_tm_section {
-  width: 100%;
-  height: auto;
-  clear: both;
-  float: left;
-}
-
-.main-sidebar {
-  width: 320px;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: -320px;
-  background-color: #fff;
-  box-shadow: 3px 0 5px #f5f5f5;
-  z-index: 3;
-}
-body.opened .main-sidebar {
-  left: 0;
-}
-.main-sidebar .logo {
-  width: 100%;
-  height: auto;
-  clear: both;
-  float: left;
-  border-bottom: 1px solid #cbd3d9;
-  padding: 40px;
-  padding-bottom: 31px;
-}
-.main-sidebar .logo img {
-  max-width: 120px;
-}
-.main-sidebar .menu {
-  width: 100%;
-  height: auto;
-  clear: both;
-  float: left;
-  padding: 50px 0px;
-  margin-top: -8px;
-  line-height: 30px;
-
-}
-.main-sidebar .menu ul {
- 
-  list-style-type: none;
-
-}
-.main-sidebar .menu ul li {
-  margin: 0 0 8px;
-  width: 100%;
-  float: left;
-}
-.main-sidebar .menu ul li:last-child {
-  margin-bottom: 0;
-}
-.main-sidebar .menu ul li a {
-  text-decoration: none;
-  color: #1a1a1a;
-  font-size: 14px;
-  font-weight: 500;
-  display: block;
-  border-radius: 6px;
-  padding: 9px 15px;
-  position: relative;
-
-}
-
-
-.main-sidebar .menu ul li .svg {
-  width: 19px;
-  height: 19px;
-  position: relative;
-  top: 3px;
-  margin-right: 15px;
-}
-.main-sidebar .author {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-top: 1px solid #cbd3d9;
-}
-.main-sidebar .author .inner {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  padding: 30px 55px;
-  margin-top: -12px;
-
-}
-.main-sidebar .author .image {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  margin-top: 12px;
-    display: inline-block;
+</head>
 
 
 
-}
-.main-sidebar .author .main {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 100%;
+<body>
 
-}
-.main-sidebar .short {
-  padding-left: 13px;
-}
-.main-sidebar .short h3 {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.2;
 
-}
-.main-sidebar .short a {
-  text-decoration: none;
-  color: #7e7e7e;
-  font-size: 14px;
-}
-.edina_tm_mainpart {
-  width: 100%;
-  height: auto;
-  clear: both;
-  float: left;
-  padding-left: 0;
 
-}
 
-body.opened .edina_tm_mainpart {
-  padding-left: 320px;
-}
-.edina_tm_hero {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  float: left;
-  background-color: #f9f9fc;
-}
-.edina_tm_hero .content {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  padding: 0px 20px;
-  padding-right: 13px;
-  padding-bottom: 12px;
+<div class="main-header-class" data-magic-cursor=""> 
+<section class="header">
+	<div class="main-sidebar">
+<div class="sidebar-main">
+<div class="logo">
+<a href="#"><img src="img/logo/dark.png" alt="" /></a>
+</div>
+<div class="menu">
+<ul>
+<li>
+<div class="list_inner current">
+<a href="#home"><img class="svg custom" src="img/svg/home.svg"/>Home</a>
+</div>
+</li>
+<li>
+<div class="list_inner">
+<a href="#about"><img class="svg custom" src="img/svg/human.svg"/>About</a>
+</div>
+</li>
+<li>
+<div class="list_inner">
+<a href="#service"><img class="svg custom" src="img/svg/service.svg"/>Service</a>
+</div>
+</li>
+<li>
+<div class="list_inner">
+<a href="#portfolio"><img class="svg custom" src="img/svg/portfolio.svg"/>Portfolio</a>
+</div>
+</li>
+<li>
+<div class="list_inner">
+<a href="#testimonial"><img class="svg custom" src="img/svg/testimonial.svg"/>Testimonial</a>
+</div>
+</li>
+<li>
+<div class="list_inner">
+<a href="#blog"><img class="svg custom" src="img/svg/blog.svg"/>Blog</a>
+</div>
+</li>
+<li>
+<div class="list_inner">
+<a href="#contact"><img class="svg custom" src="img/svg/contact.svg"/>Contact</a>
+</div>
+</li>
+</ul>
+</div>
+<div class="author">
+<div class="inner">
+<div class="image">
+<div class="main" data-img-url="img/about/avatar.jpg"></div>
+</div>
+<div class="short">
+<h3>Nelson</h3>
+<a href="#">example@gmail.com</a>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-}
+</section>
+<section>
+	<div class="edina_tm_mainpart">
 
-.edina_tm_hero .image {
-  display: inline-block;
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
-  position: relative;
-  margin-bottom: -30px;
-  opacity: 0;
-  visibility: hidden;
-  left: -20px;
+<div class="edina_tm_hero" id="home">
+<div class="content">
+<div class="image">
+<div class="main" data-img-url="img/hero/2.jpg"></div>
+</div>
+<div class="extra">
+<h3 class="name">Davide Santon</h3>
+<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volut purus ut erat mus.pendisse aliquam.</p>
+<div class="social">
+<ul>
+<li><a href="#"><img class="svg custom" src="img/svg/social/fb.svg" alt="" /></a></li>
+<li><a href="#"><img class="svg custom" src="img/svg/social/tw.svg" alt="" /></a></li>
+<li><a href="#"><img class="svg custom" src="img/svg/social/in.svg" alt="" /></a></li>
+<li><a href="#"><img class="svg custom" src="img/svg/social/db.svg" alt="" /></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-}
-body.opened .edina_tm_hero .image {
-  opacity: 1;
-  visibility: visible;
-  left: 0;
+<section id="about" class="about-sec">
 
-}
-.edina_tm_hero .image .main {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border-radius: 100%;
-}
-.edina_tm_hero .image:before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  bottom: -10px;
-  left: -10px;
-  right: -10px;
-  background-color: #e2e2e2;
-  border-radius: 100%;
-}
-.edina_tm_hero .name {
-  font-size: 80px;
-  font-weight: 700;
-  margin-bottom: 14px;
-}
-.edina_tm_hero .extra {
-  position: relative;
-  opacity: 0;
-  visibility: hidden;
-  left: -20px;
-  margin-top: -28px;
+<div class="about-me" >
+<div class="container">
+<div class="about_title">
+<h3>About Me</h3>
+</div>
+<div class="content">
+<div class="leftpart wow fadeInLeft">
+<div class="info">
+<h3>Hi, I'm <span>Rogers Nelson</span></h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus. Eu leo morbi massa sem faucibus nulla gravida arcu ante sollicitudin orci nunc gravida.</p>
+</div>
+<div class="my_skills">
+<h3 class="title">What is my skill level?</h3>
+<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
+<div class="wrapper">
+<div class="left">
+<div class="dodo_progress">
+<div class="progress_inner">
+<span class="label">React.Js</span>
+<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+</div>
+<div class="progress_inner">
+<span class="label">Photoshop</span>
+<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+</div>
+<div class="progress_inner">
+<span class="label">Illustrator</span>
+<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+</div>
+</div>
+</div>
+<div class="right">
+<div class="dodo_progress">
+<div class="progress_inner">
+<span class="label">Vue.Js</span>
+<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+</div>
+<div class="progress_inner">
+<span class="label">Figma</span>
+<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+</div>
+<div class="progress_inner">
+<span class="label">WordPress</span>
+<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="rightpart wow fadeInLeft"">
+<div class="image">
+<img src="img/thumbs/26-35.jpg" alt="" />
+<div class="main" data-img-url="img/about/2.jpg"></div>
+<div class="experience" data-wow-duration="1.2s">
+<div class="info">
+<h3>6+ Years</h3>
+<span>Of Experiance</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-}
-body.opened .edina_tm_hero .extra {
-  opacity: 1;
-  visibility: visible;
-  left: 0;
+</section>
 
-}
-.edina_tm_hero .text {
-  max-width: 500px;
-  margin: 0 auto 32px;
-  font-size: 16px;
-}
-.edina_tm_hero .social ul {
-  margin: 0;
-  list-style-type: none;
-  padding-right: 41px;
 
-}
-.edina_tm_hero .social ul li {
-  margin: 0;
-  display: inline-block;
-}
-.edina_tm_hero .social ul li a {
-  text-decoration: none;
-  color: #e7e7e7;
-  display: inline-block;
-  position: relative;
-  line-height: 1;
-  padding: 0 20px;
-}
-.edina_tm_hero .social ul li a:after {
-  position: absolute;
-  content: "";
-  width: 1px;
-  height: 100%;
-  background-color: #e5e5e5;
-  top: 0;
-  right: 0;
-}
-.edina_tm_hero .social ul li:last-child a:after {
-  display: none;
-}
-.edina_tm_hero .social ul li .svg {
-  width: 19px;
-  height: 19px;
+<section class="services">
+<div class="edina_tm_services" id="service">
+<div class="container">
+<div class="edina_tm_title leftpadding1">
+<h3>What I Do</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
+</div>
+<div class="service_list">
+<ul>
+<li class="wow fadeInLeft">
+<div class="list_inner">
+<img class="svg custom" src="img/svg/1.svg" alt="" />
+<div class="service_title"><h3>Motion Graphic</h3></div>
+<a class="learn_more" href="#">Learn More<span></span></a>
+<a class="edina_tm_full_link" href="#"></a>
+<div class="popup_informations">
+<div class="image">
+<img src="img/thumbs/4-3.jpg" alt="" />
+<div class="main" data-img-url="img/service/1.jpg"></div>
+</div>
+</div>
+</div>
+</li>
+<li class="wow fadeInLeft">
+<div class="list_inner">
+<img class="svg custom" src="img/svg/4.svg" alt="" />
+<div class="service_title"><h3>Ui/Ux Consultancy</h3></div>
+<a class="learn_more" href="#">Learn More<span></span></a>
+<a class="edina_tm_full_link" href="#"></a>
+<div class="popup_informations">
+<div class="image">
+<img src="img/thumbs/4-3.jpg" alt="" />
+<div class="main" data-img-url="img/service/2.jpg"></div>
+</div>
 
-}
+</div>
+</div>
+</li>
+<li class="wow fadeInLeft" data-wow-delay="0.4s">
+<div class="list_inner">
+<img class="svg custom" src="img/svg/2.svg" alt="" />
+<div class="service_title"><h3>Branding &amp; Design</h3></div>
+<a class="learn_more" href="#">Learn More<span></span></a>
+<a class="edina_tm_full_link" href="#"></a>
+<div class="popup_informations">
+<div class="image">
+<img src="img/thumbs/4-3.jpg" alt="" />
+<div class="main" data-img-url="img/service/3.jpg"></div>
+</div>
+</div>
+</div>
+</li>
+<li class="wow fadeInLeft" data-wow-delay="0.4s">
+<div class="list_inner">
+<img class="svg custom" src="img/svg/3.svg" alt="" />
+<div class="service_title"><h3>Mobile App Design</h3></div>
+<a class="learn_more" href="#">Learn More<span></span></a>
+<a class="edina_tm_full_link" href="#"></a>
+<div class="popup_informations">
+<div class="image">
+<img src="img/thumbs/4-3.jpg" alt="" />
+<div class="main" data-img-url="img/service/4.jpg"></div>
+</div>
+
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+	
+</section>
 
 
 
 
 
+<div class="edina_tm_portfolio" id="portfolio">
+<div class="container">
+<div class="edina_tm_title edina-testi">
+<h3>Portfolio</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
+</div>
+<div class="portfolio_inner wow fadeInLeft">
+<div class="my_carousel gallery_zoom">
+<ul class="owl-carousel">
+<li>
+<div class="list_inner">
+<div class="image">
+<img src="img/thumbs/1-1.jpg" alt="" />
+<div class="main" data-img-url="img/portfolio/1.jpg"></div>
+</div>
+<div class="details">
+<h3><a href="#">Chul Urina</a></h3>
+<span><a href="#">Vimeo</a></span>
+</div>
+<a class="edina_tm_full_link popup-vimeo" href=""></a>
+</div>
+</li>
+<li>
+<div class="list_inner">
+<div class="image">
+<img src="img/thumbs/1-1.jpg" alt="" />
+<div class="main" data-img-url="img/portfolio/2.jpg"></div>
+</div>
+<div class="details">
+<h3><a href="#">Sutki Vorta</a></h3>
+<span><a href="#">Youtube</a></span>
+</div>
+<a class="edina_tm_full_link popup-youtube" href=""></a>
+</div>
+</li>
+<li>
+<div class="list_inner">
+<div class="image">
+<img src="img/thumbs/1-1.jpg" alt="" />
+<div class="main" data-img-url="img/portfolio/3.jpg"></div>
+</div>
+<div class="details">
+<h3><a href="#">Murir Moya</a></h3>
+<span><a href="#">Soundcloud</a></span>
+</div>
+<a class="edina_tm_full_link soundcloude_link mfp-iframe audio" href=""></a>
+</div>
+</li>
+</ul>
+<a class="prev_button" href="#"><span></span></a>
+<a class="next_button" href="#"><span></span></a>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="edina_tm_testimonials" id="testimonial">
+<div class="container">
+<div class="edina_tm_title edina-testi">
+<h3>Testimonials</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
+</div>
+<div class="list wow fadeInLeft">
+<ul class="owl-carousel owl-theme">
+<li>
+<div class="list_inner">
+<div class="details">
+<div class="author">
+<div class="image">
+<div class="main" data-img-url="img/testimonials/1.jpg"></div>
+</div>
+<div class="short">
+<h3>Brook Kennedy</h3>
+<span>Marketing Manager</span>
+</div>
+</div>
+<div class="icon">
+<img class="svg" src="img/svg/quote.svg" alt="" />
+</div>
+</div>
+<div class="text">
+<p>Hi,I’m Hasan Bond and I am designer &amp; developer who dream making the world better place by products. I am also very active for international clients.</p>
+</div>
+</div>
+</li>
+<li>
+<div class="list_inner">
+<div class="details">
+<div class="author">
+<div class="image">
+<div class="main" data-img-url="img/testimonials/2.jpg"></div>
+</div>
+<div class="short">
+<h3>Avon Smith</h3>
+<span>Designer</span>
+</div>
+</div>
+<div class="icon">
+<img class="svg" src="img/svg/quote.svg" alt="" />
+</div>
+</div>
+<div class="text">
+<p>Hi,I’m Hasan Bond and I am designer &amp; developer who dream making the world better place by products. I am also very active for international clients.</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="edina_tm_news" id="blog">
+<div class="container">
+<div class="edina_tm_title edina-testi">
+<h3>News</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
+</div>
+<div class="news_inner wow fadeInLeft">
+<div class="my_carousel">
+<ul class="owl-carousel">
+<li>
+<div class="list_inner">
+<div class="image">
+<img src="img/thumbs/1-1.jpg" alt="" />
+<div class="main" data-img-url="img/news/1.jpg"></div>
+<a class="edina_tm_full_link" href="#"></a>
+</div>
+<div class="news_details">
+<h3 class="title"><a href="#">Dostie Memorie</a></h3>
+</div>
+</div>
+</li>
+<li>
+<div class="list_inner">
+<div class="image">
+<img src="img/thumbs/1-1.jpg" alt="" />
+<div class="main" data-img-url="img/news/2.jpg"></div>
+<a class="edina_tm_full_link" href="#"></a>
+</div>
+<div class="news_details">
+<span>June 25,2021 <a href="#">Branding</a></span>
+<h3 class="title"><a href="#">Mario Pocopoc</a></h3>
+</div>
+
+</div>
+</li>
+<li>
+<div class="list_inner">
+<div class="image">
+<img src="img/thumbs/1-1.jpg" alt="" />
+<div class="main" data-img-url="img/news/3.jpg"></div>
+<a class="edina_tm_full_link" href="#"></a>
+</div>
+<div class="news_details">
+<span>May 01,2021 <a href="#">Lifestyle</a></span>
+<h3 class="title"><a href="#">Jacuba Bamba</a></h3>
+</div>
+</div>
+</li>
+<li>
+<div class="list_inner">
+<div class="image">
+<img src="img/thumbs/1-1.jpg" alt="" />
+<div class="main" data-img-url="img/news/4.jpg"></div>
+<a class="edina_tm_full_link" href="#"></a>
+</div>
+<div class="news_details">
+<span>April 07,2021 <a href="#">Design</a></span>
+<h3 class="title"><a href="#">Forzo Immobile</a></h3>
+</div>
+</div>
+</li>
+<li>
+<div class="list_inner">
+<div class="image">
+<img src="img/thumbs/1-1.jpg" alt="" />
+<div class="main" data-img-url="img/news/2.jpg"></div>
+<a class="edina_tm_full_link" href="#"></a>
+</div>
+<div class="news_details">
+<span>March 25,2021 <a href="#">Branding</a></span>
+<h3 class="title"><a href="#">Mosby Lavette</a></h3>
+</div>
+</div>
+</li>
+</ul>
+<a class="prev_button" href="#"><span></span></a>
+<a class="next_button" href="#"><span></span></a>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="edina_tm_contact leftpadding1" id="contact">
+<div class="container">
+<div class="edina_tm_title edina-testi">
+<h3>Contact</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
+</div>
+<div class="extra_info">
+<ul class="wrapper">
+<li class="wow fadeInLeft" data-wow-duration="1s">
+<div class="list_inner">
+<h3>Phone:</h3>
+<ul class="in">
+<li>+452 666 386</li>
+<li>+465 562 226</li>
+</ul>
+</div>
+</li>
+<li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+<div class="list_inner">
+<h3>Email:</h3>
+<ul class="in">
+<li><a href="#"><span>
+support@gmail.com</span></a></li>
+<li><a href="#"><span>example@support.com</span></a></li>
+</ul>
+</div>
+</li>
+<li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
+<div class="list_inner">
+<h3>Address:</h3>
+<ul class="in">
+<li>
+<p>Maount View, Oval Road<br /> New York, USA</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="mainpart">
+<div class="left">
+<div class="title">
+<p>I'm always open to discussing product<br /><span>design work or partnerships.</span></p>
+</div>
+<div class="fields wow fadeInLeft" data-wow-duration="1s">
+<form action="" method="post" class="contact_form" id="contact_form" autocomplete="off">
+<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
+<div class="empty_notice"><span>Please Fill Required Fields</span></div>
+<div class="first_row">
+<input id="name" type="text" placeholder="Name*" />
+</div>
+<div class="second">
+<input id="email" type="text" placeholder="Email*" />
+</div>
+<div class="third">
+<textarea id="message" placeholder="Message*"></textarea>
+</div>
+<div class="edina_tm_button">
+<a id="send_message" href="#">Submit</a>
+</div>
+
+</form>
+</div>
+</div>
+<div class="right wow fadeInLeft">
+<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14538.088588772658!2d88.6047775!3d24.3631329!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x77d2fff44f051ccc!2sDainik%20Barta%20Complex%2C%20Alupotti%2C%20Rajshahi!5e0!3m2!1sen!2sbd!4v1656168287968!5m2!1sen!2sbd" width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
 
 
 
 
 
+</div>
 
 
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.js"></script>
+<script src="js/plugins.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&amp;callback=initMap"></script>
+<script src="js/init.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>
+</html>
