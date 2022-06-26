@@ -183,8 +183,8 @@ body.opened .main-sidebar {
     height: auto;
     display: flex;
     align-items: center;
-    padding: 30px 55px;
-    margin-top: -12px;
+    padding: 33.5px 55px;
+    margin-bottom: 6px;
 }
 
 .main-sidebar .author .image {
@@ -192,7 +192,7 @@ body.opened .main-sidebar {
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    margin-top: 12px;
+    margin-top: 8px;
     display: inline-block;
 }
 
@@ -210,13 +210,14 @@ body.opened .main-sidebar {
 
 .main-sidebar .short {
     padding-left: 13px;
+    line-height: 0px;
 }
 
 .main-sidebar .short h3 {
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.2;
-    padding-top: 5px;
+    line-height: 1;
+    margin-top: -5px;
 }
 
 .main-sidebar .short a {
@@ -506,8 +507,8 @@ body.opened .about-sec {
 }
 
 .about-sec .rightpart {
-    width: 50%;
-    padding-left: 200px;
+    width: 52%;
+    padding-left: 190px!important;
 }
 
 .about-sec .rightpart .image {
@@ -522,20 +523,20 @@ body.opened .about-sec {
 
 .about-sec .rightpart .image .main {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
+    top: 0!important;
+    bottom: 25px!important;
+    right: -14px!important;
+    left: 27px!important;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    background-size: cover!important;
+    border-radius: 10px!important;
 }
 
 .about-sec .experience {
     position: absolute;
-    bottom: -50px;
-    left: -50px;
+    bottom: -24px!important;
+    left: -23px!important;
     z-index: 1;
     width: 291px;
     height: 291px;
@@ -604,8 +605,17 @@ body.opened .services {
 }
 
 .leftpadding1 {
-    margin-left: 32px;
+    margin-left: 32px!important;
     margin-left: -16px;
+}
+
+.edina-testi1{
+  margin-top: -60px;
+}
+
+
+.my_carousel .prev_button {
+  left: 6px!important;
 }
 
 
@@ -626,11 +636,28 @@ body.opened .services {
 }
 
 .edina_tm_services ul li {
-    margin: 0px 0px 30px 0px;
+    margin: 0px 0px 0px 0px;
     width: 25%;
-    padding-left: 40px;
+    padding-left: 0px;
     float: left;
+
+    margin-left: -8px;
+    margin-top: -80px;
 }
+.libra1{
+  margin-left: 6.5px!important;
+}
+
+.libra2{
+  margin-left: 6.5px!important;
+}
+
+
+.libra3{
+  padding-left: 16px!important;
+
+}
+
 
 .edina_tm_services ul li .list_inner {
     width: 100%;
@@ -946,7 +973,8 @@ body.opened .edina_tm_portfolio {
     height: auto;
     clear: both;
     float: left;
-    padding-top: 80px;
+    padding-top: 60px!important;
+    margin-left: -20px!important;
 }
 
 .edina_tm_portfolio {
@@ -965,6 +993,212 @@ body.opened .edina_tm_portfolio {
     padding-top: 80px;
 }
 
+.my_carousel{
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  position: relative;
+}
+.my_carousel ul{
+  margin: 0px;
+  list-style-type: none;
+}
+.my_carousel ul li{
+  margin: 0px;
+}
+.my_carousel ul li .list_inner{
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  position: relative;
+}
+.my_carousel ul li .image{
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.my_carousel ul li .image img{
+  position: relative;
+  opacity: 0;
+  min-width: 100%;
+}
+.my_carousel ul li .image .main{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  
+  -webkit-transition: all .3s ease;
+     -moz-transition: all .3s ease;
+      -ms-transition: all .3s ease;
+       -o-transition: all .3s ease;
+          transition: all .3s ease;
+}
+.my_carousel ul li .list_inner:hover .image .main{
+  transform: scale(1.1) translateZ(0);
+}
+.my_carousel ul .details{
+  width: 100%;
+  float: left;
+  padding-top: 10px;
+}
+.my_carousel ul .details h3 a{
+  text-decoration: none;
+  color: #1A1A1A;
+  font-size: 22px;
+  font-weight: 700;
+}
+.my_carousel ul .details span a{
+  text-decoration: none;
+  color: #7E7E7E;
+  font-size: 16px;
+  font-weight: 400;
+}
+.my_carousel .prev_button,
+.my_carousel .next_button{
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  border: 2px solid #7E7E7E;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: -43px;
+  z-index: 6;
+  
+  -webkit-transition: all .3s ease;
+     -moz-transition: all .3s ease;
+      -ms-transition: all .3s ease;
+       -o-transition: all .3s ease;
+          transition: all .3s ease;
+}
+.my_carousel .prev_button:hover,
+.my_carousel .next_button:hover{
+  border-color: rgba(255,255,255,.2);
+  background-color: #000;
+}
+.my_carousel .prev_button{
+  left: -33px;
+}
+.my_carousel .next_button{
+  right: -33px;
+}
+.my_carousel .prev_button span,
+.my_carousel .next_button span{
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: #7E7E7E;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50px;
+  
+  -webkit-transition: all .3s ease;
+     -moz-transition: all .3s ease;
+      -ms-transition: all .3s ease;
+       -o-transition: all .3s ease;
+          transition: all .3s ease;
+}
+.my_carousel .prev_button:hover span,
+.my_carousel .next_button:hover span{
+  background-color: #fff;
+}
+.my_carousel .prev_button span:before{
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 2px;
+  background-color: #7E7E7E;
+  left: -2px;
+  top: -8px;
+  transform: rotate(-45deg);
+  border-radius: 50px;
+  
+  -webkit-transition: all .3s ease;
+     -moz-transition: all .3s ease;
+      -ms-transition: all .3s ease;
+       -o-transition: all .3s ease;
+          transition: all .3s ease;
+}
+.my_carousel .prev_button span:after{
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 2px;
+  background-color: #7E7E7E;
+  left: -2px;
+  bottom: -8px;
+  transform: rotate(45deg);
+  border-radius: 50px;
+  
+  -webkit-transition: all .3s ease;
+     -moz-transition: all .3s ease;
+      -ms-transition: all .3s ease;
+       -o-transition: all .3s ease;
+          transition: all .3s ease;
+}
+.my_carousel .next_button span:before{
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 2px;
+  background-color: #7E7E7E;
+  right: -2px;
+  top: -8px;
+  transform: rotate(45deg);
+  border-radius: 50px;
+  
+  -webkit-transition: all .3s ease;
+     -moz-transition: all .3s ease;
+      -ms-transition: all .3s ease;
+       -o-transition: all .3s ease;
+          transition: all .3s ease;
+}
+.my_carousel .next_button span:after{
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 2px;
+  background-color: #7E7E7E;
+  right: -2px;
+  bottom: -8px;
+  transform: rotate(-45deg);
+  border-radius: 50px;
+  
+  -webkit-transition: all .3s ease;
+     -moz-transition: all .3s ease;
+      -ms-transition: all .3s ease;
+       -o-transition: all .3s ease;
+          transition: all .3s ease;
+}
+.my_carousel .prev_button:hover span:before,
+.my_carousel .prev_button:hover span:after,
+.my_carousel .next_button:hover span:before,
+.my_carousel .next_button:hover span:after{
+  background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 body.opened .edina_tm_testimonials {
     padding-left: 320px;
@@ -978,6 +1212,12 @@ body.opened .edina_tm_testimonials {
     float: left;
     background-color: #F9F9FC;
     padding: 100px 0px 90px 0px;
+}
+
+
+
+.testi-left{
+      margin-left: -8px;
 }
 
 .edina_tm_testimonials .list {
