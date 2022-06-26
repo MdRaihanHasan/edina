@@ -609,6 +609,10 @@ body.opened .services {
     margin-left: -16px;
 }
 
+.edina-cont{
+  margin-left: -16px;
+}
+
 .edina-testi1{
   margin-top: -60px;
 }
@@ -1589,8 +1593,9 @@ body.opened .edina_tm_contact {
     height: auto;
     clear: both;
     float: left;
-    padding-top: 60px;
+    padding-top: 22px;
     margin-bottom: 30px;
+    margin-left: -56px;
 }
 
 .edina_tm_contact .extra_info .wrapper {
@@ -1618,6 +1623,22 @@ body.opened .edina_tm_contact {
 .edina_tm_contact .extra_info .in {
     margin: 0px;
     list-style-type: none;
+    margin-left: -41px;
+}
+
+.email-cont{
+      margin-left: 22px;
+
+}
+
+.road-cont{
+      margin-left: 44px;
+
+}
+
+
+.road-cont ul li p{
+  margin-top: 0px;
 }
 
 .edina_tm_contact .extra_info .in li {
